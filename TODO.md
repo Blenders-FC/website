@@ -1,8 +1,8 @@
 - [ ] Repository List
-  - [ ] Update Repository Links to the real ones 
+  - [x] Update Repository Links to the real ones 
   - [ ] _(Optional)_ Update stars based on real repository data
 - [ ] Layout
-  - [ ] Add the "We're currently preparing for the RoboCup Humanoid League KidSize Soccer division"
+  - [x] Add the "We're currently preparing for the RoboCup Humanoid League KidSize Soccer division"
   - [ ] Add Links to Github and Instagram (Icons)
   - [ ] _(Optional)_ Dark Mode and Light Mode toggle 
 - [ ] Views 

@@ -8,14 +8,39 @@ import Repositories from "../components/Repositories.astro";
 <Layout title="Robotec">
   <main>
     <Header />
-
     <p>Located in Guadalajara, Jalisco. Blender-FC is a robotics football team with a focus in teamwork and collaboration.</p>
-  
+  </main>
+
+  <div id = "announcement">
+
+    <p>We are currently preparing for a potential entry <br />into the RoboCup Humanoid League KidSize Soccer division!</p>
+    
+  <div> 
+
+  <main>
     <Repositories /> 
   </main>
 </Layout>
 
 <style>
+  #announcement { 
+    background-image: linear-gradient(45deg, #f58748, #f8dc4f);
+    color: black;
+    justify-content: center;
+    width: 100%;
+    height: 8vh; 
+
+    padding-top: 1rem;
+    padding-bottom: 2rem;
+    margin-bottom: 1rem;
+  }
+  #announcement > p { 
+    font-style: normal;
+    font-size: 120%;
+    text-align: center;
+  }
+  
+
   main {
     margin: auto;
     padding: 1rem;
