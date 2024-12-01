@@ -1,0 +1,159 @@
+---
+// RepositoryList.astro
+const repositories = [
+  {
+    name: 'soccer_sim_pkg',
+    description: 'Main package with all the content for simulation packages and nodes - Blenders team',
+    stars: 1,
+    language: 'Python',
+    url: 'https://github.com/yourusername/main-repo'
+  },
+  {
+    name: 'blenders_soccer_pkg',
+    description: 'Main package with all the content of Blenders team',
+    stars: 1,
+    language: 'CMake',
+    url: 'https://github.com/yourusername/ui-components'
+  },
+  {
+    name: 'movement_pkg',
+    description: 'Package with all the content for movement nodes - Blenders team',
+    stars: 0,
+    language: 'C++',
+    url: 'https://github.com/yourusername/api-gateway'
+  },
+  {
+    name: 'vision_pkg',
+    description: 'Package with all the content for computer vision nodes - Blenders team',
+    stars: 1,
+    language: 'Python',
+    url: 'https://github.com/yourusername/docs'
+  }
+];
+---
+
+<div class="repository-container">
+  <ul class="repository-list">
+    {repositories.map((repo) => (
+      <li class="repository-item">
+        <div class="repository-content">
+          <div class="repository-main">
+            <a href={repo.url} class="repository-name">{repo.name}</a>
+            <p class="repository-description">{repo.description}</p>
+          </div>
+          <div class="repository-meta">
+            <span class="language-badge">{repo.language}</span>
+            <div class="stars">
+              <span class="star-icon">★</span>
+              {repo.stars}
+            </div>
+          </div>
+        </div>
+      </li>
+    ))}
+  </ul>
+</div>
+
+<style>
+  .repository-container {
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  #subtitle {
+    color: white;
+    text-align: left;
+    margin: 0 0 1.5rem 0;
+    font-size: 1.5rem;
+    font-weight: 600;
+  }
+
+  .repository-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .repository-item {
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    padding: 1rem;
+    background: rgba(255, 255, 255, 0.05);
+    transition: all 0.2s ease;
+  }
+
+  .repository-item:hover {
+    background: rgba(255, 255, 255, 0.08);
+    border-color: rgba(255, 255, 255, 0.2);
+    transform: translateY(-1px);
+  }
+
+  .repository-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .repository-main {
+    flex: 1;
+  }
+
+  .repository-name {
+    color: #58a6ff;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.1rem;
+    display: inline-block;
+    margin-bottom: 0.5rem;
+  }
+
+  .repository-name:hover {
+    text-decoration: underline;
+  }
+
+  .repository-description {
+    color: #8b949e;
+    margin: 0;
+    font-size: 0.9rem;
+  }
+
+  .repository-meta {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    font-size: 0.9rem;
+  }
+
+  .language-badge {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 0.25rem 0.75rem;
+    border-radius: 1rem;
+    color: #8b949e;
+  }
+
+  .stars {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+    color: #8b949e;
+  }
+
+  .star-icon {
+    color: #e3b341;
+  }
+
+  @media (max-width: 640px) {
+    .repository-content {
+      flex-direction: column;
+    }
+
+    .repository-meta {
+      margin-top: 0.5rem;
+    }
+  }
+</style>
