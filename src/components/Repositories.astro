@@ -1,11 +1,10 @@
 ---
 import RepositoryList from "./RepositoryList.astro"
-import Links from "./Links.astro"
 ---
 
 <h2 id = "subtitle"> Repositories </h2>
 
-<p> Our repositories are hosted on <a href = "https://github.com/Blenders-FC" id = "github-link"> GitHub</a>. You can find (some of) them at the following links: </p>
+<p> Our repositories are hosted on <a href = "https://github.com/Blenders-FC" id = "github-link" target="_blank" rel="noopener noreferrer"> GitHub</a>. You can find (some of) them at the following links: </p>
 
 <RepositoryList />
 <style>
@@ -13,6 +12,7 @@ import Links from "./Links.astro"
     color: white;
     text-align: left;
     margin: 0; 
+    margin-top: 2rem;
   }
   #github-link { 
     color: #4e6bdf;
