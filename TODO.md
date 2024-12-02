@@ -1,3 +1,5 @@
+- [ ] Repository 
+  - [ ] Change repository name to `blenders-fc.github.io`
 - [ ] Repository List
   - [x] Update Repository Links to the real ones 
   - [ ] _(Optional)_ Update stars based on real repository data
@@ -10,4 +12,6 @@
     - [ ] Update members list 
   - [ ] Home View
     - [ ] Mention Tecnologico de Monterrey
-    - [ ] Previous competitions 
+    - [ ] Previous competitions
+
+For some of these tasks, please refer to [REF.md](./REF.md) for more information. 
